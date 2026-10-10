@@ -1,0 +1,10 @@
+{
+  "description": "Track and manage facility documents effortlessly with automated alerts for actions needed, enhancing efficiency for facility managers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
