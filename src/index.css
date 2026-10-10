@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-sans: 'Instrument Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --color-ink: #16130f;
+  --color-paper: #f5f1e8;
+  --color-lime: #ff5b35;
+  --color-ink2: #26211a;
+  --color-rule: rgba(22, 19, 15, 0.14);
+  --color-st-expired: #d7263d;
+  --color-st-critical: #e8590c;
+  --color-st-warning: #c98a00;
+  --color-st-attention: #2f6fde;
+  --color-st-valid: #1e8e5a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.reveal {
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
